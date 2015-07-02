@@ -8,9 +8,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -62,6 +64,8 @@ public class mainWelcom extends Activity {
         //填充ViewPager的数据适配器
         pagerAdapter mPagerAdapter = new pagerAdapter(views);
         mViewPager.setAdapter(mPagerAdapter);
+
+
     }
 
 
@@ -89,6 +93,14 @@ public class mainWelcom extends Activity {
                 case 3:
                     mPage3.setImageDrawable(getResources().getDrawable(R.drawable.page_now));
                     mPage2.setImageDrawable(getResources().getDrawable(R.drawable.page));
+                    Button bt = (Button) findViewById(R.id.what_news_start_button);
+
+                    bt.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            setContentView(R.layout.activity_welcome);
+                        }
+                    });
                     break;
             }
         }
