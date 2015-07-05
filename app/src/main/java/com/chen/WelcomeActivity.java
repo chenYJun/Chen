@@ -1,9 +1,18 @@
 package com.chen;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 
 public class WelcomeActivity extends ActionBarActivity {
@@ -11,6 +20,9 @@ public class WelcomeActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        SharedPreferences mPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        mPreferences.edit().putBoolean("fullScreen", false).commit() ;
         setContentView(R.layout.activity_welcome);
     }
 
@@ -27,13 +39,21 @@ public class WelcomeActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.action_settings :
+                Toast toast = Toast.makeText(getApplicationContext(), "settings1", Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+                Log.d("LogMenu", "settings1");
+                break;
+            case R.id.action_settings2:
+                Toast.makeText(getApplicationContext(), "settings2", Toast.LENGTH_SHORT).show();
+                Log.d("Logmenu", "settings2");
+                break;
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
+
 }
