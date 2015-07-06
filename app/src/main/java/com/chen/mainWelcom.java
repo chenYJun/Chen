@@ -5,6 +5,7 @@ package com.chen;
  */
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -16,7 +17,10 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.chen.TabMenu.MainTabActivity;
+
 import java.util.ArrayList;
+import java.util.logging.Handler;
 
 
 public class mainWelcom extends Activity {
@@ -101,7 +105,11 @@ public class mainWelcom extends Activity {
                     bt.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            setContentView(R.layout.activity_welcome);
+                            new MainTabActivity();
+                            Intent mainInten = new Intent();
+                            mainInten.setClass(getApplicationContext(), MainTabActivity.class);
+                            startActivity(mainInten);
+                            //setContentView(R.layout.maintabs);
                         }
                     });
                     break;

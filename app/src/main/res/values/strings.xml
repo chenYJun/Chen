@@ -33,4 +33,13 @@
     <string name="welcome_scan">code scanning</string>
     <string name="welcome_surf_internet">Surf Internet</string>
     <string name="welcome_manager">Now go to manage all accounts</string>
+
+
+    <!-- TabMenu -->
+    <string name="hello">Hello World, MainTabActivity!</string>
+    <string name="main_news">消息</string>
+    <string name="main_home">首页</string>
+    <string name="more">更多</string>
+    <string name="main_manage_date">时间</string>
+    <string name="main_friends">好友</string>
 </resources>
