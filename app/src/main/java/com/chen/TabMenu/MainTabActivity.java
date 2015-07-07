@@ -3,6 +3,7 @@ package com.chen.TabMenu;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
@@ -10,6 +11,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TabHost;
 
 import com.chen.R;
+import com.chen.welActivity;
 
 public class MainTabActivity extends TabActivity implements OnCheckedChangeListener{
 	
@@ -24,7 +26,7 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.maintabs);
         
         this.mAIntent = new Intent(this,AActivity.class);
@@ -52,7 +54,10 @@ public class MainTabActivity extends TabActivity implements OnCheckedChangeListe
 		if(isChecked){
 			switch (buttonView.getId()) {
 			case R.id.radio_button0:
-				this.mTabHost.setCurrentTabByTag("A_TAB");
+				//this.mTabHost.setCurrentTabByTag("A_TAB");
+				Intent intent = new Intent();
+				intent.setClass(getApplicationContext(), welActivity.class);
+				startActivity(intent);
 				break;
 			case R.id.radio_button1:
 				this.mTabHost.setCurrentTabByTag("B_TAB");

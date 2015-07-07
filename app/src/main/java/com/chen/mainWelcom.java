@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.chen.TabMenu.MainTabActivity;
+import com.chen.weixin6_0_tab.MainActivity;
 
 import java.util.ArrayList;
 import java.util.logging.Handler;
@@ -107,9 +108,8 @@ public class mainWelcom extends Activity {
                         public void onClick(View v) {
                             new MainTabActivity();
                             Intent mainInten = new Intent();
-                            mainInten.setClass(getApplicationContext(), MainTabActivity.class);
+                            mainInten.setClass(getApplicationContext(), MainActivity.class);
                             startActivity(mainInten);
-                            //setContentView(R.layout.maintabs);
                         }
                     });
                     break;

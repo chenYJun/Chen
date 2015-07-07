@@ -39,7 +39,7 @@ public class WelcomeActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        switch (item.getItemId()) {
+      /*  switch (item.getItemId()) {
             case R.id.action_settings :
                 Toast toast = Toast.makeText(getApplicationContext(), "settings1", Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
@@ -51,7 +51,7 @@ public class WelcomeActivity extends ActionBarActivity {
                 Log.d("Logmenu", "settings2");
                 break;
 
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }

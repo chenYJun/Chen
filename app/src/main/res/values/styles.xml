@@ -1,8 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
         <!-- Customize your theme here. -->
+        <item name="android:actionOverflowButtonStyle">@style/weixinActionOverflowButtonStyle</item>
+    </style>
+
+    <style name="weixinActionOverflowButtonStyle">
+        <item name="android:src">@drawable/actionbar_add_icon</item>
     </style>
 
     <style name="whats_new_title">

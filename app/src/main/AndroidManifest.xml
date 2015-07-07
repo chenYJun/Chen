@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.chen.mainWelcom"
+            android:name="com.chen.weixin6_0_tab.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,8 @@
         <activity android:name="com.chen.TabMenu.DActivity"/>
         <activity android:name="com.chen.TabMenu.EActivity"/>
         <activity android:name="com.chen.TabMenu.MainTabActivity"/>
-
+        <activity android:name="com.chen.welActivity"/>
+        <!--<activity android:name="com.chen.weixin6_0_tab.MainActivity"/>-->
     </application>
 
 </manifest>
