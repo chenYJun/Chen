@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -38,6 +39,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		setOverflowButtonAlways();
+		//是否可点
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		//是否有返回图标
+		getActionBar().setHomeButtonEnabled(true);
+		//是否显示菜单图标
 		getActionBar().setDisplayShowHomeEnabled(false);
 
 		initView();
@@ -85,6 +91,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		};
 	}
 
+
 	private void initView()
 	{
 		mViewPager = (ViewPager) findViewById(R.id.id_viewpager);
@@ -114,6 +121,9 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 		return true;
 	}
 
+	/**
+	 * 利用反射进行设置menu
+	 */
 	private void setOverflowButtonAlways()
 	{
 		try
@@ -210,6 +220,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,
 	{
 		// Log.e("TAG", "position = " + position + " ,positionOffset =  "
 		// + positionOffset);
+		Log.d("chenTest", String.valueOf(positionOffset));
 		if (positionOffset > 0)
 		{
 			ChangeColorIconWithText left = mTabIndicators.get(position);
