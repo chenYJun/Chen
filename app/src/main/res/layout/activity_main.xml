@@ -27,7 +27,8 @@
             chen:icons="@drawable/ic_menu_start_conversation"
             chen:text="@string/tab_chat"
             chen:text_size="12sp"
-            chen:colors="#ff45c01a" />
+            chen:colors="#ff45c01a">
+        </com.chen.weixin6_0_tab.ChangeColorIconWithText>
 
         <com.chen.weixin6_0_tab.ChangeColorIconWithText
             android:id="@+id/id_indicator_two"

@@ -40,7 +40,7 @@ public class mainWelcom extends Activity {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.main);
+        setContentView(R.layout.weixin_1);
         mViewPager = (ViewPager)findViewById(R.id.whatsnew_viewpager);
 
 
